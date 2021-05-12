@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: feder8-config-server
