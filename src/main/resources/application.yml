@@ -1,6 +1,3 @@
-server:
-  port: 8888
-
 spring:
   cloud:
     config:
@@ -9,9 +6,5 @@ spring:
           uri: ${user.home}/config-repo
   security:
     user:
-      name: root
-      password: s3cr3t
-
-logging:
-  level:
-    org.springframework.cloud: 'DEBUG'
+      name: ${FEDER8_CONFIG_SERVER_USERNAME:root}
+      password: ${FEDER8_CONFIG_SERVER_PASSWORD:s3cr3t}
