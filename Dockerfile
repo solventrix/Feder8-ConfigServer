@@ -3,7 +3,8 @@ FROM golang:1.16-buster as golang-build
 WORKDIR /go/src/app
 COPY cmd cmd
 
-RUN go install -v ./...
+RUN go env -w GO111MODULE=auto; \
+    go install -v ./...
 
 FROM feder8/config-server
 
