@@ -15,8 +15,8 @@ if __name__ == "__main__":
     oauthClientSecret = os.environ.get('FEDER8_CONFIG_SERVER_OAUTH_CLIENT_SECRET', 'feder8-oidc-local-client')
     imageRepositoryHost = os.environ.get('FEDER8_CONFIG_SERVER_IMAGE_REPOSITORY_HOST', 'harbor.honeur.org')
     catalogueUri = os.environ.get('FEDER8_CONFIG_SERVER_CATALOGUE_URI', 'https://catalogue.honeur.org')
-    therapeuticArea = os.environ.get('FEDER8_CONFIG_SERVER_THERAPEUTIC_AREA', 'honeur')
-    organization = os.environ.get('FEDER8_CONFIG_SERVER_ORGANIZATION', 'janssen')
+    therapeuticArea = os.environ.get('FEDER8_CONFIG_SERVER_THERAPEUTIC_AREA', 'honeur').lower()
+    organization = os.environ.get('FEDER8_CONFIG_SERVER_ORGANIZATION', 'janssen').lower()
     logLevel = os.environ.get('LOG_LEVEL', 'INFO').upper()
     logging.basicConfig(level=logLevel)
 
