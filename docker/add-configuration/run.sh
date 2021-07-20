@@ -2,7 +2,7 @@
 set -ex
 
 VERSION=2.0.0
-TAG=add-configuration-$VERSION
+TAG=update-configuration-$VERSION
 
 touch config-server-add-configuration.env
 
