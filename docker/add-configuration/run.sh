@@ -6,19 +6,19 @@ TAG=add-configuration-$VERSION
 
 touch config-server-add-configuration.env
 
-echo "FEDER8_CONFIG_SERVER_HOST=localhost" >> config-server-add-configuration.env
-echo "FEDER8_CONFIG_SERVER_DATASOURCE_HOST=postgres" >> config-server-add-configuration.env
-echo "FEDER8_CONFIG_SERVER_DATASOURCE_PORT=5432" >> config-server-add-configuration.env
-echo "FEDER8_CONFIG_SERVER_DATASOURCE_DATABASE=OHDSI" >> config-server-add-configuration.env
-echo "FEDER8_CONFIG_SERVER_DATASOURCE_USERNAME=honeur" >> config-server-add-configuration.env
-echo "FEDER8_CONFIG_SERVER_DATASOURCE_ADMIN_USERNAME=honeur_admin" >> config-server-add-configuration.env
-echo "FEDER8_CONFIG_SERVER_IDP_URI=https://cas-dev.honeur.org" >> config-server-add-configuration.env
-echo "FEDER8_CONFIG_SERVER_OAUTH_CLIENT_ID=feder8-local" >> config-server-add-configuration.env
-echo "FEDER8_CONFIG_SERVER_OAUTH_CLIENT_SECRET=feder8-local-secret" >> config-server-add-configuration.env
-echo "FEDER8_CONFIG_SERVER_IMAGE_REPOSITORY_HOST=harbor.honeur.org" >> config-server-add-configuration.env
-echo "FEDER8_CONFIG_SERVER_CATALOGUE_URI=https://catalogue-dev.honeur.org" >> config-server-add-configuration.env
-echo "FEDER8_CONFIG_SERVER_THERAPEUTIC_AREA=honeur" >> config-server-add-configuration.env
-echo "FEDER8_CONFIG_SERVER_ORGANIZATION=test" >> config-server-add-configuration.env
+echo "FEDER8_LOCAL_HOST_NAME=localhost" >> config-server-add-configuration.env
+echo "FEDER8_LOCAL_DATASOURCE_HOST=postgres" >> config-server-add-configuration.env
+echo "FEDER8_LOCAL_DATASOURCE_PORT=5432" >> config-server-add-configuration.env
+echo "FEDER8_LOCAL_DATASOURCE_NAME=OHDSI" >> config-server-add-configuration.env
+echo "FEDER8_LOCAL_DATASOURCE_USERNAME=honeur" >> config-server-add-configuration.env
+echo "FEDER8_LOCAL_DATASOURCE_ADMIN-USERNAME=honeur_admin" >> config-server-add-configuration.env
+echo "FEDER8_CENTRAL_SERVICE_OAUTH-ISSUER-URI=https://cas-dev.honeur.org" >> config-server-add-configuration.env
+echo "FEDER8_CENTRAL_SERVICE_OAUTH-CLIENT-ID=feder8-local" >> config-server-add-configuration.env
+echo "FEDER8_CENTRAL_SERVICE_OAUTH-CLIENT-SECRET=feder8-local-secret" >> config-server-add-configuration.env
+echo "FEDER8_CENTRAL_SERVICE_IMAGE-REPO=harbor.honeur.org" >> config-server-add-configuration.env
+echo "FEDER8_CENTRAL_SERVICE_CATALOGUE-BASE-URI=https://catalogue-dev.honeur.org" >> config-server-add-configuration.env
+echo "FEDER8_LOCAL_THERAPEUTIC_AREA=honeur" >> config-server-add-configuration.env
+echo "FEDER8_LOCAL_ORGANIZATION=test" >> config-server-add-configuration.env
 
 docker run \
 --rm \

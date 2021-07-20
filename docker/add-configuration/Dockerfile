@@ -6,7 +6,7 @@ RUN set -eux; \
         git \
     ; \
     rm -rf /var/lib/apt/lists/*; \
-    pip install sh
+    pip install sh pyyaml
 
 RUN groupadd --system --gid 54321 feder8; \
     useradd --system --create-home --home-dir /home/feder8 --shell /bin/bash --uid 54321 --gid 54321 feder8
