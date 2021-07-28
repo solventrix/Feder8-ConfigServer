@@ -2,7 +2,7 @@
 feder8:
   local:
     host:
-      name:
+      name: ""
       portal-url: "http://${feder8.local.host.name}"
       token-url: "http://localhost:8080/api/token"
       atlas-url: "${feder8.local.host.portal-url}/atlas"
@@ -39,4 +39,4 @@ feder8:
       image-repo: ""
       image-repo-username: ""
       image-repo-key: ""
-      catalogue-base-uri: "FEDER8_CENTRAL_SERVICE_CATALOGUE-BASE-URI"
+      catalogue-base-uri: ""
