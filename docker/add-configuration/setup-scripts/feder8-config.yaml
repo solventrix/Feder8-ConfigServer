@@ -6,7 +6,7 @@ feder8:
       portal-url: "http://${feder8.local.host.name}"
       token-url: "http://localhost:8080/api/token"
       atlas-url: "${feder8.local.host.portal-url}/atlas"
-      zeppelin-url: "${feder8.local.host.portal-url}/zeppelin"
+      zeppelin-url: "${feder8.local.host.portal-url}/zeppelin/"
       user-mgmt-url: "${feder8.local.host.portal-url}/user-mgmt"
       feder8-studio-url: "${feder8.local.host.portal-url}/honeur-studio"
       vscode-url: "${feder8.local.host.feder8-studio-url}/app/vscode"
