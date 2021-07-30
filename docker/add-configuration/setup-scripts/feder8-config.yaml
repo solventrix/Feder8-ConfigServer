@@ -14,6 +14,10 @@ feder8:
       apps-reports-url: "${feder8.local.host.feder8-studio-url}/app/reports"
       documents-url: "${feder8.local.host.feder8-studio-url}/app/documents"
       personal-url: "${feder8.local.host.feder8-studio-url}/app/personal"
+      data-directory: ""
+      feder8-studio-directory: ""
+      zeppelin-notebook-directory: ""
+      zeppelin-log-directory: ""
     datasource:
       dbms: "postgresql"
       host: ""
@@ -27,6 +31,15 @@ feder8:
       vocabulary-schema: "omopcdm"
       results-schema: "results"
       scratch-schema: "scratch"
+    security:
+      security-method: ""
+      ldap-url: ""
+      ldap-base-dn: ""
+      ldap-dn: ""
+      ldap-system-username: ""
+      ldap-system-password: ""
+      user-mgmt-username: ""
+      user-mgmt-password: ""
   central:
     service:
       oauth-issuer-uri: ""
