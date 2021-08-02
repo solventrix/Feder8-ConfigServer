@@ -58,3 +58,5 @@ feder8:
       image-repo-username: ""
       image-repo-key: ""
       catalogue-base-uri: ""
+      distributed-analytics-base-uri: ""
+      distributed-analytics-api-url: "${feder8.central.service.distributed-analytics-base-uri}/distributed-service/api"
