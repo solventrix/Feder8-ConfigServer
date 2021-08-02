@@ -22,6 +22,7 @@ feder8:
       feder8-studio-directory: ""
       zeppelin-notebook-directory: ""
       zeppelin-log-directory: ""
+      docker-cert-directory: ""
     datasource:
       dbms: "postgresql"
       host: ""
