@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>org.feder8</groupId>
 	<artifactId>config-server</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.9-SNAPSHOT</version>
 	<name>Feder8-ConfigServer</name>
 	<description>Configuration server for the local Feder8 toolbox</description>
 

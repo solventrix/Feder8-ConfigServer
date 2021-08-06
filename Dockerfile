@@ -21,12 +21,10 @@ RUN set -eux; \
 RUN groupadd --system --gid 54321 feder8;\
     useradd --system --create-home --home-dir /home/feder8 --shell /bin/bash --uid 54321 --gid 54321 feder8
 
-USER feder8
-
-WORKDIR /home/feder8
+USER root
 
 RUN mkdir -p config-repo
 
-VOLUME /home/feder8/config-repo
+VOLUME /root/config-repo
 
 EXPOSE 8080
