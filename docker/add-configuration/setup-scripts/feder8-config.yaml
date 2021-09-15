@@ -60,4 +60,4 @@ feder8:
       catalogue-base-uri: ""
       catalogue-api-url: "${feder8.central.service.catalogue-base-uri}/api"
       distributed-analytics-base-uri: ""
-      distributed-analytics-api-url: "${feder8.central.service.distributed-analytics-base-uri}/distributed-service/api"
+      distributed-analytics-api-url: "${feder8.central.service.distributed-analytics-base-uri}/api"
