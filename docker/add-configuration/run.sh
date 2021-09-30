@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -ex
 
-VERSION=2.0.0
+VERSION=2.0.1
 TAG=update-configuration-$VERSION
 
 touch config-server-add-configuration.env

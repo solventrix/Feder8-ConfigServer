@@ -18,6 +18,8 @@ feder8:
       apps-reports-url: "${feder8.local.host.feder8-studio-url}/app/reports"
       documents-url: "${feder8.local.host.feder8-studio-url}/app/documents"
       personal-url: "${feder8.local.host.feder8-studio-url}/app/personal"
+      task-manager-url: "${feder8.local.host.portal-url}/task-manager"
+      task-manager-container-url: "http://task-manager:8080/task-manager"
       data-directory: ""
       feder8-studio-directory: ""
       zeppelin-notebook-directory: ""
