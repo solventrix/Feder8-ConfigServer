@@ -20,11 +20,11 @@ pipeline {
                         therapeuticAreaDomains = ['honeur.org','phederation.org','esfurn.org'] //athenafederation.org
                         for (int i = 0; i < therapeuticAreas.size(); i++) {
                             try {
-                                withDockerRegistry(credentialsId: "harbor-${therapeuticAreas[i]}-robot-dev", url: "https://harbor-dev.${therapeuticAreaDomains[i]}") {
-                                    sh "THERAPEUTIC_AREA=${therapeuticAreas[i]} THERAPEUTIC_AREA_URL=harbor-dev.${therapeuticAreaDomains[i]} ./publish.sh"
+                                withDockerRegistry(credentialsId: "harbor-${therapeuticAreas[i]}-robot-uat", url: "https://harbor-uat.${therapeuticAreaDomains[i]}") {
+                                    sh "THERAPEUTIC_AREA=${therapeuticAreas[i]} THERAPEUTIC_AREA_URL=harbor-uat.${therapeuticAreaDomains[i]} ./publish.sh"
                                 }
                             } catch (e) {
-                                notifyPushFailed("https://harbor-dev.${therapeuticAreaDomains[i]}")
+                                notifyPushFailed("https://harbor-uat.${therapeuticAreaDomains[i]}")
                             }
                         }
                     }
