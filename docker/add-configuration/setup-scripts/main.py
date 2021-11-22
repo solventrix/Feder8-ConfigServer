@@ -9,8 +9,7 @@ def update(yaml, nestedKeys, value):
         key = nestedKeys.pop(0)
         update(yaml.get(key, {}), nestedKeys, value)
     else:
-        if nestedKeys[0] in yaml:
-            yaml[nestedKeys[0]] = value
+        yaml[nestedKeys[0]] = value
     return yaml
 
 if __name__ == "__main__":
