@@ -88,6 +88,49 @@
 				<artifactId>maven-failsafe-plugin</artifactId>
 				<version>2.22.2</version>
 			</plugin>
+			<plugin>
+				<groupId>com.github.wvengen</groupId>
+				<artifactId>proguard-maven-plugin</artifactId>
+				<version>2.5.3</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>proguard</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<proguardVersion>7.2.1</proguardVersion>
+					<includeDependency>false</includeDependency>
+					<obfuscate>true</obfuscate>
+					<injar>config-server-${project.version}.jar</injar>
+					<outjar>config-server-${project.version}.jar</outjar>
+					<inFilter>!BOOT-INF/classes/**</inFilter>
+					<obfuscate>true</obfuscate>
+					<options>
+						<option>-dontshrink</option>
+						<option>-dontoptimize</option>
+						<option>-libraryjars ${java.home}/jmods/java.base.jmod(!**.jar;!module-info.class)</option>
+						<option>-dontwarn org.springframework.**</option>
+						<option>-dontwarn org.fasterxml.**</option>
+						<option>-dontwarn com.fasterxml.**</option>
+						<option>-dontwarn org.apache.**</option>
+						<option>-dontwarn org.slf4j.**</option>
+						<option>-keep public class org.feder8.configurationservice.ConfigurationServiceApplication {
+							public static void main(java.lang.String[]);
+							}
+						</option>
+					</options>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>com.guardsquare</groupId>
+						<artifactId>proguard-base</artifactId>
+						<version>7.2.1</version>
+					</dependency>
+				</dependencies>
+			</plugin>
 		</plugins>
 	</build>
 
