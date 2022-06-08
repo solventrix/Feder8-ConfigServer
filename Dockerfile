@@ -1,3 +1,7 @@
+ARG CONFIG_SERVER_VERSION=2.0.2
+ARG REGISTRY=harbor.honeur.org
+ARG REPOSITORY=honeur
+
 FROM golang:1.16-buster as golang-build
 
 WORKDIR /go/src/app
@@ -6,7 +10,7 @@ COPY cmd cmd
 RUN go env -w GO111MODULE=auto; \
     go install -v ./...
 
-FROM feder8/config-server
+FROM $REGISTRY/$REPOSITORY/config-server-base:$CONFIG_SERVER_VERSION
 
 COPY --from=golang-build /go/bin/healthcheck /app/healthcheck
 HEALTHCHECK --start-period=1m30s --interval=1m --timeout=10s --retries=10 CMD ["/app/healthcheck"]

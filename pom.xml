@@ -10,14 +10,14 @@
 	</parent>
 	<groupId>org.feder8</groupId>
 	<artifactId>config-server</artifactId>
-	<version>2.0.1</version>
+	<version>2.0.2</version>
 	<name>Feder8-ConfigServer</name>
 	<description>Configuration server for the local Feder8 toolbox</description>
 
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2020.0.2</spring-cloud.version>
-		<log4j2.version>2.16.0</log4j2.version>
+		<log4j2.version>2.17.2</log4j2.version>
 	</properties>
 
 	<dependencies>
@@ -65,13 +65,27 @@
 			<plugin>
 				<groupId>com.google.cloud.tools</groupId>
 				<artifactId>jib-maven-plugin</artifactId>
-				<version>3.1.2</version>
+				<version>3.2.1</version>
 				<configuration>
 					<from>
 						<image>openjdk:11-jdk-slim-buster</image>
+						<platforms>
+							<platform>
+								<architecture>arm64</architecture>
+								<os>linux</os>
+							</platform>
+							<platform>
+								<architecture>amd64</architecture>
+								<os>linux</os>
+							</platform>
+						</platforms>
 					</from>
 					<to>
-						<image>feder8/config-server</image>
+						<image>${env.REGISTRY}/${env.REPOSITORY}/config-server-base:${project.version}</image>
+						<auth>
+							<username>${env.REGISTRY_USERNAME}</username>
+							<password>${env.REGISTRY_PASSWORD}</password>
+						</auth>
 					</to>
 					<container>
 						<creationTime>${maven.build.timestamp}</creationTime>
